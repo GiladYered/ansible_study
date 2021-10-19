@@ -1,0 +1,7 @@
+---
+- hosts: "{{ server_env_group }}"
+  become: true
+  vars_files:
+        - ~/.ansible/inventories/{{ env }}/group_vars/main.yml
+  roles:
+    - role: common

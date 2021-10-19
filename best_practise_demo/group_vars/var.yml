@@ -1,0 +1,7 @@
+---
+# http_port: 80
+# database_server: storage.example.com
+ansible_user: ansible_user
+ansible_password: ansible_user
+ansible_connection: winrm
+ansible_winrm_server_cert_validation: ignore

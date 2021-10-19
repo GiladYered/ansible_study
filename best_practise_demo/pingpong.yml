@@ -1,0 +1,16 @@
+---
+- name: "Create New user on Windows Machine"
+  hosts: "{{ nodes }}"
+  vars:
+      - ansible_user: ansible_user
+      - ansible_password: ansible_user
+      - ansible_connection: winrm
+      - ansible_winrm_server_cert_validation: ignore
+      
+  tasks:
+
+    - name: "Check Windows machines access using win_ping"
+
+      win_ping:
+
+      # when: ansible_os_family == 'Windows'
